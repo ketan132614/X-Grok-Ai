@@ -6,52 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
-    <div class="chatbot-popup">
+    <div class="chatbot-popup" id="myText">
         <div class="chat-header">
             <div class="header-info">
-                <img class="chatbot-logo" src="https://play-lh.googleusercontent.com/dQRKhi30KpzG3gww3TdVLzyIAVuOAWylnAcgnEUxqfpm2A8dEt2sgApVvtKAy-DO8aI"alt="" width="50" height="50">
+                <img class="chatbot-logo" src="grok.png" alt="" width="50" height="50">
                 <h2 class="logo-text">Grok</h2>
             </div>
-            <button id="close-chatbot" class="material-symbols-rounded"><img
+
+            <button id="hide-btn" class="material-symbols-rounded"><img
                     src="keyboard_arrow_down_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="" class="drop"></button>
+
         </div>
 
         <div class="chat-body">
             <div class="message bot-message">
-                <img class="bot-avatar" src="https://play-lh.googleusercontent.com/dQRKhi30KpzG3gww3TdVLzyIAVuOAWylnAcgnEUxqfpm2A8dEt2sgApVvtKAy-DO8aI"alt="" width="50" height="50">
+                <img class="bot-avatar" src="grok.png" alt="" width="50" height="50">
                 <div class="message-text">Hey there 👋 <br> How can I help you today?</div>
             </div>
-            <div class="message user-message">
-                <div class="message-text">Lorem ipsum dolor sit amet consectetur.</div>
-            </div>
+
             <div class="message bot-message thinking">
-                <img class="bot-avatar" src="https://play-lh.googleusercontent.com/dQRKhi30KpzG3gww3TdVLzyIAVuOAWylnAcgnEUxqfpm2A8dEt2sgApVvtKAy-DO8aI"alt="" width="50" height="50">
+                <img class="bot-avatar" src="grok.png" alt="" width="50" height="50">
                 <div class="message-text">
-                    <div class="thinking-indicator">
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
+                    <div class="loader-rotate">
+                        <div class="dot dot1"></div>
+                        <div class="dot dot2"></div>
+                        <div class="dot dot3"></div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="chat-footer">
             <form action="#" class="chat-form">
-                <textarea placeholder="Message..." class="message-input"></textarea>
+                <textarea placeholder="Message..." class="message-input" required></textarea>
                 <div class="chat-controls">
                     <button type="button" class="material-symbols-rounded"><img
-                    src="sentiment_satisfied_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="" ></button>
+                            src="sentiment_satisfied_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
                     <button type="button" class="material-symbols-rounded"><img
-                    src="attach_file_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="" ></button>
-                    <button type="submit" class="material-symbols-rounded"><img
-                    src="arrow_upward_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="" ></button>
+                            src="attach_file_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+                    <button type="submit" id="send-message" class="material-symbols-rounded"><img
+                            src="arrow_upward_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
                 </div>
             </form>
         </div>
     </div>
+        <button id="show-btn" class="show-logo hide">
+            <img class="chatbot-logo close-logo" src="grok.png" alt="" width="50" height="50">
+        </button>
 </body>
 
 </html>
